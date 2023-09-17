@@ -10,3 +10,7 @@ Classez_et_segmentez_des_données_visuelles/*
 # sauf :
 !Classez_et_segmentez_des_données_visuelles/cat.png
 !Classez_et_segmentez_des_données_visuelles/main.cpp
+
+##### pour le projet nlp :
+Analysez_vos_données_textuelles/nlp-getting-started
+Analysez_vos_données_textuelles/__pycache__
