@@ -6,7 +6,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
+
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+"""from transformers import pipeline
+sentiment_pipeline = pipeline("sentiment-analysis")
+data = ["I love you", "I hate you"]
+specific_model = pipeline(model="finiteautomata/bertweet-base-sentiment-analysis")
+specific_model(data)
+#sentiment_pipeline(data)"""
+
+from transformers import pipeline
+
+model_id = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+
+sentiment_pipe = pipeline("sentiment-analysis", model=model_id)
+print(sentiment_pipe("I don't like you."))
  
+"""
 chemin_dossier = os.path.dirname(os.path.abspath(__file__))
 chemin_fichier_donnees = chemin_dossier + "\\nlp-getting-started\\train.csv"
 
@@ -19,7 +36,11 @@ doc_entraine_filtree = doc_entraine.apply(filtrage)
 
 # séparation des documents lié à l'enentrainementement en deux groupes :
 X_entraine, X_val, y_entraine, y_val = train_test_split(doc_entraine, pre_entraine, test_size=0.2, random_state=42)
+"""
+# Exploration des données :
 
+
+"""
 # Vectorisation des documents :
 modele_de_vectorisation = TfidfVectorizer(max_features=2500)
 X_entraine_vecteur = modele_de_vectorisation.fit_transform(X_entraine)
@@ -37,3 +58,4 @@ print("Précision du modèle :", precision)
 print(classification_report(y_val, y_pred))
 
 #validation_data = pd.read_csv(path + "\\nlp-getting-started\\validation.csv")
+"""
