@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploiement_serveur_mongoDB
+  name: deploiement-serveur-mongodb
 spec:
   replicas: 1
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: image_serveur_mongoDB:latest
+        image: image-serveur-mongoDB:latest
         ports:
         - containerPort: 27017

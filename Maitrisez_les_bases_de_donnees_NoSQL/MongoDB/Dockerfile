@@ -2,14 +2,31 @@ FROM mongo:latest
 
 WORKDIR /data
 
-COPY restaurants.json_.zip /data/
+RUN apt-get update -y && \
+    apt-get clean 
+    #&& \
+    #useradd -ms /bin/bash user
 
-RUN apt-get update -y && apt-get install -y unzip
-RUN unzip restaurants.json_.zip -d /data/
-RUN rm restaurants.json_.zip
 
-VOLUME [ "/data/db" ]
+#USER user
+#WORKDIR /home/user
 
-EXPOSE 27017
+VOLUME ["/data/db"]
+
+EXPOSE 27017:27017
 
 CMD ["mongod"]
+
+#
+# Commandes pour démarer le contenaire
+#
+
+# docker build -t mongo_server MongoDB
+# docker run mongo_server
+
+
+#
+# Commande pour exporter la basse de donnée au serveur (après avoir installer mongodb sur la machine hôte) :
+#
+
+# mongoimport --host=172.17.0.2:27017 --db new_york --collection restaurants restaurants.json

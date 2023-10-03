@@ -1,10 +1,17 @@
-##### pour le projet SQL :
+#
+# pour le projet SQL :
+#
 Requêtez_une_base_de_données_avec_SQL/__pycache__
+Requêtez_une_base_de_données_avec_SQL/tables/__pycache__
 
-##### pour le projet noSQL :
+#
+# pour le projet noSQL :
+#
 Maitrisez_les_bases_de_donnees_NoSQL/MongoDB/restaurants.json_.zip
 
-##### pour le projet OpenCV :
+#
+# pour le projet OpenCV :
+#
 Classez_et_segmentez_des_données_visuelles/*
 
 # sauf :
@@ -12,6 +19,15 @@ Classez_et_segmentez_des_données_visuelles/*
 !Classez_et_segmentez_des_données_visuelles/main.cpp
 !Classez_et_segmentez_des_données_visuelles/tests
 
-##### pour le projet nlp :
+#
+# pour le projet nlp :
+#
 Analysez_vos_données_textuelles/nlp-getting-started
 Analysez_vos_données_textuelles/__pycache__
+
+#
+# pour le brouillon :
+#
+Brouillon/NoSQL/kubernetes/minikube
+Brouillon/NoSQL/client_rust/target
+Brouillon/NoSQL/client_rust/Cargo.lock

@@ -1,0 +1,15 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mongodb = { version = "2.7.0", features = ["tracing-unstable"] }
+bson = { version = "2.7.0", features = ["chrono-0_4"] }
+tokio = "1.32.0"
+chrono = "0.4.31"
+serde = "1.0.188"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"

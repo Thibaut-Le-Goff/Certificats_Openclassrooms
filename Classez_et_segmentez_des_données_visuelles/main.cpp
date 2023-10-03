@@ -1,5 +1,10 @@
 #include <opencv2/opencv.hpp>
+#include <opencv2/core/mat.hpp>
+#include <opencv2/core.hpp>
+
+
 #include <iostream>
+#include <stdio.h>
 
 #include "tests/ajouts.h"
 #include "tests/suppressions.h"
@@ -7,7 +12,7 @@
 
 
 int main() {
-    cv::Mat image = cv::imread("images/cat.png", cv::IMREAD_GRAYSCALE);
+    cv::Mat image = cv::imread("cat.png", cv::IMREAD_GRAYSCALE);
 
     if (image.empty()) {
         std::cerr << "L'image n'�xiste pas." << std::endl;

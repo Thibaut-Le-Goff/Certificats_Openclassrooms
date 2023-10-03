@@ -9,15 +9,14 @@ def main():
     suppression_table(action, "entity2")
 
     # visualisation d'une table :
-    nom_table = "entity"
+    nom_table = "entity1"
     nb_ligne = 10
+    print("Les", nb_ligne, "premières lignes de la table", nom_table, "contienent :")
     voir_lignes(action, nb_ligne, nom_table)
 
     # création d'une table :
     nom_table = "entity2"
-    creation_table(action, nom_table)
-    nb_ligne = 1
-    voir_lignes(action, nb_ligne, nom_table)
+    creation_table_entity(action, nom_table)
 
     # insertion dans la table :
     donnees_a_ajouter = [
@@ -30,10 +29,14 @@ def main():
 
     # visualisation de la table créée
     nb_ligne = 3
+    print("Les", nb_ligne, "premières lignes de la table", nom_table, "contienent :")
     voir_lignes(action, nb_ligne, nom_table)
 
     # suppression d'une table :
     suppression_table(action, nom_table)
+
+    nom_table = "compte2"
+    creation_table_compte(action, nom_table)
 
     action.close()
     connection.close()
